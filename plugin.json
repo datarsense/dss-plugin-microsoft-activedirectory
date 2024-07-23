@@ -1,0 +1,61 @@
+{
+    "id": "ms-activedirectory",
+    "version": "0.0.1",
+    "meta": {
+        "label": "Microsoft Active Directory",
+        "description": "Plugin providing python connectors to load data from Microsoft Active Directory.",
+        "author": "admin",
+        "icon": "icon-lock",
+        "tags": ["Security"],
+        "url": "https://github.com/datarsense/dss-plugin-microsoft-activedirectory",
+        "licenseInfo": "Apache Software License"
+    },
+    "params": [
+        {
+            "name": "ldap_server_fqdn",
+            "label": "LDAP server",
+            "type": "STRING",
+            "description": "FQDN or IP address.",
+            "mandatory": true
+        },
+        {
+            "name": "ldap_server_port",
+            "label": "LDAP server port",
+            "type": "INT",
+            "mandatory": true,
+            "defaultValue": 636
+        },
+        {
+            "name": "use_tls",
+            "label": "Use TLS ?",
+            "description": "Use TLS to secure LDAP connection ?",
+            "type": "BOOLEAN",
+            "mandatory": true,
+            "defaultValue": true
+        },
+        {
+            "name": "anonymous_bind",
+            "label": "Anonymous bind ?",
+            "description": "Connect anonymously to LDAP server ?",
+            "type": "BOOLEAN",
+            "mandatory": true,
+            "defaultValue": true
+        },
+        {
+            "name": "bind_dn",
+            "label": "Bind DN",
+            "description": "If the LDAP server requires authentication, specifies the DN to use for queries.",
+            "type": "STRING",
+            "mandatory": true,
+            "visibilityCondition": "model.anonymous_bind == false"
+        },
+        {
+            "name": "bind_password",
+            "label": "Bind password",
+            "description": "If the LDAP server requires authentication, specifies the password to use for queries, along with the Bind DN above.",
+            "type": "STRING",
+            "mandatory": true,
+            "visibilityCondition": "!model.anonymous_bind"
+        }
+    ]
+}
