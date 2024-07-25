@@ -1,0 +1,19 @@
+
+{
+    "meta" : {
+        "label": "Get all user accounts",
+        "description": "Get all user accounts",
+        "icon": "icon-user"
+    },
+    "readable": true,
+    "writable": false,
+    "params": [
+        {
+            "name": "base_dn",
+            "label": "Ldap base DN",
+            "description": "Ex: dc=contoso, dc=com",
+            "type": "STRING",
+            "mandatory": true
+        }
+    ]
+}

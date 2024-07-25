@@ -1,11 +1,11 @@
 {
-    "id": "ms-activedirectory",
+    "id": "microsoft-activedirectory",
     "version": "0.0.1",
     "meta": {
         "label": "Microsoft Active Directory",
         "description": "Plugin providing python connectors to load data from Microsoft Active Directory.",
         "author": "admin",
-        "icon": "icon-lock",
+        "icon": "icon-user",
         "tags": ["Security"],
         "url": "https://github.com/datarsense/dss-plugin-microsoft-activedirectory",
         "licenseInfo": "Apache Software License"
@@ -39,12 +39,12 @@
             "description": "Connect anonymously to LDAP server ?",
             "type": "BOOLEAN",
             "mandatory": true,
-            "defaultValue": true
+            "defaultValue": false
         },
         {
             "name": "bind_dn",
             "label": "Bind DN",
-            "description": "If the LDAP server requires authentication, specifies the DN to use for queries.",
+            "description": "If the LDAP server requires authentication, specifies the DN to use for LDAP bind.",
             "type": "STRING",
             "mandatory": true,
             "visibilityCondition": "model.anonymous_bind == false"
@@ -53,7 +53,7 @@
             "name": "bind_password",
             "label": "Bind password",
             "description": "If the LDAP server requires authentication, specifies the password to use for queries, along with the Bind DN above.",
-            "type": "STRING",
+            "type": "PASSWORD",
             "mandatory": true,
             "visibilityCondition": "!model.anonymous_bind"
         }
