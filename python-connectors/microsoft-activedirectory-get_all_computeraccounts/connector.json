@@ -1,0 +1,19 @@
+
+{
+    "meta" : {
+        "label": "Get all computer accounts",
+        "description": "Get all computer accounts",
+        "icon": "icon-desktop"
+    },
+    "readable": true,
+    "writable": false,
+    "params": [
+        {
+            "name": "base_dn",
+            "label": "Ldap base DN",
+            "description": "Ex: dc=contoso, dc=com",
+            "type": "STRING",
+            "mandatory": true
+        }
+    ]
+}
