@@ -1,6 +1,6 @@
 {
     "id": "microsoft-activedirectory",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "meta": {
         "label": "Microsoft Active Directory",
         "description": "Plugin providing python connectors to load data from Microsoft Active Directory.",

@@ -130,7 +130,8 @@ class GetADUserAccounts(Connector):
                 entry_dict = dict(entry['attributes'])
 
                 # Convert userAccountControl integer to himan readable flags using https://github.com/qtc-de/wconv
-                entry_dict['userAccountControl'] = UserAccountControl.parse_flags(entry_dict['userAccountControl'])
+                if 'userAccountControl' in entry_dict:
+                    entry_dict['userAccountControl'] = UserAccountControl.parse_flags(entry_dict['userAccountControl'])
 
                 # Parse ntSecurityDescriptor
                 try:
